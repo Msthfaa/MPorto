@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function Hero() {
@@ -7,7 +7,7 @@ export default function Hero() {
     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const textVariants = {
+  const textVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
       opacity: 1,
