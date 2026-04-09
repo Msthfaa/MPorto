@@ -15,7 +15,6 @@ const textVariants: Variants = {
       transition: {
         delay: i * 0.1,
         duration: 0.8,
-        // @ts-ignore
         ease: [0.2, 0.65, 0.3, 0.9],
       },
     }),
