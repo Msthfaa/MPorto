@@ -1,5 +1,5 @@
 "use client";
-import { motion, Variants, Variant } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function Hero() {
@@ -15,10 +15,11 @@ const textVariants: Variants = {
       transition: {
         delay: i * 0.1,
         duration: 0.8,
+        // @ts-ignore
         ease: [0.2, 0.65, 0.3, 0.9],
       },
     }),
-  } as Variants;
+  };
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-24 px-6 relative overflow-hidden">
