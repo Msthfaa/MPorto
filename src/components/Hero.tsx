@@ -1,13 +1,13 @@
 "use client";
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Download } from "lucide-react";
 
 export default function Hero() {
   const scrollToProjects = () => {
     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
 
-const textVariants: Variants = {
+  const textVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
       opacity: 1,
@@ -52,7 +52,12 @@ const textVariants: Variants = {
           Information Technology student at PENS blending robust Backend Development with intuitive UI/UX Design. Passionate about leveraging Generative AI and modern frameworks to build smart, scalable, and user-centric digital experiences.
         </motion.p>
         
-        <motion.div custom={4} variants={textVariants} initial="hidden" animate="visible">
+        {/* CTA Buttons */}
+        <motion.div
+          custom={4} variants={textVariants} initial="hidden" animate="visible"
+          className="flex flex-col sm:flex-row items-center gap-4"
+        >
+          {/* Primary: Check Out My Work */}
           <button
             onClick={scrollToProjects}
             className="group relative flex items-center gap-3 px-8 py-4 bg-zinc-100 text-zinc-950 rounded-full font-semibold overflow-hidden transition-transform hover:scale-105 active:scale-95"
@@ -62,6 +67,18 @@ const textVariants: Variants = {
               <ArrowRight className="w-4 h-4" />
             </span>
           </button>
+
+          {/* Secondary: Download CV */}
+          <a
+            href="/cv.pdf"
+            download="Musthofa_Agung_CV.pdf"
+            className="group relative flex items-center gap-3 px-8 py-4 bg-transparent text-zinc-100 rounded-full font-semibold border border-zinc-700 hover:border-zinc-500 overflow-hidden transition-all hover:scale-105 active:scale-95 hover:bg-zinc-900/50"
+          >
+            <span className="relative z-10">Download CV</span>
+            <span className="relative z-10 flex items-center justify-center w-8 h-8 bg-zinc-800 rounded-full text-zinc-100 group-hover:-translate-y-0.5 group-hover:translate-y-[none] transition-transform">
+              <Download className="w-4 h-4" />
+            </span>
+          </a>
         </motion.div>
       </div>
     </section>
