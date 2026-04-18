@@ -109,7 +109,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ delay: index * 0.1, duration: 0.6, ease: [0.2, 0.65, 0.3, 0.9] }}
+      transition={{ delay: index * 0.1, duration: 0.6, ease: [0.2, 0.65, 0.3, 0.9] as [number, number, number, number] }}
       className={`${project.colSpan}`}
       style={{ transformStyle: "preserve-3d" }}
     >
@@ -232,7 +232,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, ease: [0.2, 0.65, 0.3, 0.9] }}
+          transition={{ duration: 0.7, ease: [0.2, 0.65, 0.3, 0.9] as [number, number, number, number] }}
           className="mb-8"
         >
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
