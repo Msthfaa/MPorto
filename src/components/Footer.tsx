@@ -22,7 +22,7 @@ const stagger = {
   show: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.12, duration: 0.6, ease: [0.2, 0.65, 0.3, 0.9] },
+    transition: { delay: i * 0.12, duration: 0.6, ease: [0.2, 0.65, 0.3, 0.9] as [number, number, number, number] },
   }),
 };
 
